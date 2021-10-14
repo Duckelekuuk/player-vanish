@@ -6,6 +6,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class PlayerVanish extends JavaPlugin {
 
+    private final VanishPlayerHandler vanishPlayerHandler = new VanishPlayerHandler();
+
     @Override
     public void onEnable() {
         getServer().getPluginManager().registerEvents(new PlayerJoinListener(), this);
