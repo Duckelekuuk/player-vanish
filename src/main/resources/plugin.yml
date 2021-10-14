@@ -2,3 +2,7 @@ name: PlayerVanish
 author: Duckelekuuk
 version: 1
 main: com.duckelekuuk.player_vanish.PlayerVanish
+
+commands:
+  vanish:
+    description: Main command for vanish
