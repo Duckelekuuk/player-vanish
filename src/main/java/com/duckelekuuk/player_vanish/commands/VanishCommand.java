@@ -1,6 +1,6 @@
 package com.duckelekuuk.player_vanish.commands;
 
-import com.duckelekuuk.player_vanish.constants.VanishPermissions;
+import com.duckelekuuk.player_vanish.constants.VanishConstants;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -24,7 +24,7 @@ public class VanishCommand implements CommandExecutor, TabExecutor {
     public List<String> onTabComplete(CommandSender commandSender, Command command, String s, String[] strings) {
         if (strings.length < 1) return Collections.emptyList();
         if (strings.length == 1) {
-            return Arrays.stream(SUB_COMMANDS).filter(argument -> commandSender.hasPermission(VanishPermissions.COMMAND_PREFIX + argument) && argument.startsWith(strings[0])).collect(Collectors.toList());
+            return Arrays.stream(SUB_COMMANDS).filter(argument -> commandSender.hasPermission(VanishConstants.COMMAND_PREFIX + argument) && argument.startsWith(strings[0])).collect(Collectors.toList());
         }
 
         return Collections.emptyList();
