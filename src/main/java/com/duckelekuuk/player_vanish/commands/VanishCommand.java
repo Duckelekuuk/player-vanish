@@ -1,6 +1,8 @@
 package com.duckelekuuk.player_vanish.commands;
 
+import com.duckelekuuk.player_vanish.VanishPlayerHandler;
 import com.duckelekuuk.player_vanish.constants.VanishConstants;
+import lombok.RequiredArgsConstructor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -11,9 +13,11 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@RequiredArgsConstructor
 public class VanishCommand implements CommandExecutor, TabExecutor {
 
     private static final String[] SUB_COMMANDS = {"list"};
+    private final VanishPlayerHandler vanishPlayerHandler;
 
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
